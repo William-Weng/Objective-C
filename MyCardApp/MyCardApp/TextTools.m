@@ -63,7 +63,7 @@
 
 - (NSString *)getUTF8SiteFromGoogleChartAPI:(NSString*)barCodeType content:(NSString*)content imageSize:(NSString*)imageSize{
     
-    NSString *contentUTF8 = [[NSString stringWithFormat:@"http://chart.apis.google.com/chart?cht=%@&chl=%@&chs=%@", barCodeType, content, imageSize] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *contentUTF8 = [[NSString stringWithFormat:@"https://chart.googleapis.com/chart?cht=%@&chl=%@&chs=%@", barCodeType, content, imageSize] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     return contentUTF8;
 }

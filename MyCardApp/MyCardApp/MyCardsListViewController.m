@@ -181,7 +181,7 @@
     TextTools *textTools = [[TextTools alloc] init];
     NSString *qrcodeSite = [textTools getUTF8SiteFromGoogleChartAPI:barCodeType content:[card toJSON] imageSize:imageSize];
     NSURL *qrcodeURL = [NSURL URLWithString:qrcodeSite];
-    UIImageView* ivMyImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
+    UIImageView* ivMyImageView = [UIImageView new];
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:[card mainInfo][0][VALUE] message:nil delegate:nil cancelButtonTitle:nil otherButtonTitles:@"YES", nil];
     
     ivMyImageView.contentMode = UIViewContentModeScaleAspectFit;

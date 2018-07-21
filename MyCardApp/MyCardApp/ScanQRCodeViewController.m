@@ -175,8 +175,9 @@
     [_audioPlayer prepareToPlay];
     [_audioPlayer play];
     [self.delegate updateCards:card];
-        
+    
     qrcode = nil;
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)goBackListView:(UIBarButtonItem *)sender {
